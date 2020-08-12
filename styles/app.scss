@@ -50,59 +50,6 @@ body {
 }
 
 
-.app-container {
-  padding: $unit / 2;
-
-  @media (min-width: $breakpoint-sm) {
-    padding: $unit;
-  }
-  @media (min-width: $breakpoint-md) {
-    padding: $unit * 2;
-  }
-}
-
-
-
-.vimeo-slido-container {
-  //...
-
-  @media (min-width: $breakpoint-sm) {
-    display: flex;
-  }
-}
-
-main {
-  margin-bottom: $unit / 2;
-  overflow: hidden;
-
-  background: $grey-1;
-  border-radius: $unit / 2;
-
-  @media (min-width: $breakpoint-sm) {
-    flex-basis: 100%;
-  }
-}
-
-
-aside {
-  display: block;
-
-  background: $grey-1;
-  border-radius: $unit / 2;
-
-  @media (min-width: $breakpoint-sm) {
-    flex-basis: 32rem;
-    //padding: $unit * 2;
-  }
-}
-
-
-
-.logo-bottom {
-  background: $white;
-}
-
-
 
 
 footer {

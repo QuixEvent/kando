@@ -15,31 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
+    <header class="visually-hidden">
+        <h1>Kando conference</h1>
+    </header>
     <div class="grid">
         <div class="cell cell-A">
-            cell-A
-        </div>
-        <div class="cell cell-B">
-            cell-B
-        </div>
-        <div class="cell cell-C">
-            [kando] conference
-        </div>
-        <div class="cell cell-D">
-            <img src="/img/asahi.svg" alt="Asahi">
-        </div>
-    </div>
-
-
-
-    <div class="app-container">
-        <header class="visually-hidden">
-            <h1>Kando conference</h1>
-        </header>
-        <div class="vimeo-slido-container">
-            <main>
+            <div class="embedd-container">
                 <!--iframe
                     src="https://player.vimeo.com/video/286898202"
                     width="100%"
@@ -48,27 +29,36 @@
                     webkitallowfullscreen
                     mozallowfullscreen
                     allowfullscreen></iframe-->
-                <div class="embedd-container">
-                    <iframe
-                        src='https://player.vimeo.com/video/66140585'
-                        frameborder='0'
-                        webkitAllowFullScreen
-                        mozallowfullscreen
-                        allowFullScreen></iframe>
-                </div>
-            </main>
-            <aside>
-                <code>
-                    < iframe –– slido >
-                </code>
-            </aside>
+                <!--
+                    How Do I Make the Player Embed Responsive?
+                    ---
+                    https://help.livestream.com/hc/en-us/articles/360002068967-How-Do-I-Make-the-Player-Embed-Responsive-
+                -->
+                <iframe
+                    src='https://player.vimeo.com/video/66140585'
+                    frameborder='0'
+                    style="width: 100%;"
+                    webkitAllowFullScreen
+                    mozallowfullscreen
+                    allowFullScreen></iframe>
+            </div>
         </div>
-        <footer>
-            <a
-                href="//www.asahibreweries.eu/"
-                target="_blank">Asahi CE &amp; Europe Services</a>
-        </footer>
+        <div class="cell cell-B">
+            < iframe –– slido >
+        </div>
+        <div class="cell cell-C">
+            <span>[kando]</span>&nbsp;conference
+        </div>
+        <div class="cell cell-D">
+            <img src="/img/asahi.svg" alt="Asahi">
+        </div>
     </div>
+
+    <footer>
+        <a
+            href="//www.asahibreweries.eu/"
+            target="_blank">Asahi CE &amp; Europe Services</a>
+    </footer>
     <script src="scripts/app.js"></script>
     <!--script>document.write('<link href="dist/app.css?v=0.002.'+ Math.floor(Math.random() * 100) +'" rel="stylesheet">');</script-->
 </body>

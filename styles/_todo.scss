@@ -72,7 +72,7 @@ body {
 //
 .cell-A {
   //...
-  background: red;
+  background: $black;
 }
 
 
@@ -81,7 +81,8 @@ body {
 //
 .cell-B {
   //...
-  background: orange;
+  background: $grey-1;
+  text-align: center;
 }
 
 
@@ -98,6 +99,10 @@ body {
   font-weight: bold;
 
   background: $brand-color;
+
+  span {
+    color: #dbb574;
+  }
 }
 
 

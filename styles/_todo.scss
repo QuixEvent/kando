@@ -30,3 +30,88 @@
     height: 100%;
   }
 }
+
+
+
+//
+//  grid
+//
+body {
+  margin: $unit;
+}
+
+.grid {
+  width: calc(100vw - (#{$unit} * 2));
+  height: calc(100vh - (#{$unit} * 2));
+
+  max-width: $app-max-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-gap: $unit;
+  grid-template-columns: 1fr 34rem;
+  grid-template-rows: 1fr 10rem;
+
+  @media (min-height: 1080px) {
+    height: auto;
+    min-height: 80rem;
+    margin-top: 6rem;
+  }
+}
+
+
+.cell {
+  border-radius: $unit / 2;
+  box-shadow: 0 0 $unit 0 $grey-1;
+}
+
+
+//
+//  Vimeo <iframe>
+//
+.cell-A {
+  //...
+  background: red;
+}
+
+
+//
+//  Slido <iframe>
+//
+.cell-B {
+  //...
+  background: orange;
+}
+
+
+//
+//  banner
+//
+.cell-C {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $white;
+  text-align: center;
+  font-weight: bold;
+
+  background: $brand-color;
+}
+
+
+//
+//  logo
+//
+.cell-D {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: $white;
+
+  img {
+    width: 14rem;
+  }
+}

@@ -50,7 +50,6 @@ body {
 }
 
 
-
 .app-container {
   padding: $unit / 2;
 
@@ -79,9 +78,6 @@ main {
   background: $grey-1;
   border-radius: $unit / 2;
 
-  @media (max-width: $breakpoint-sm-min) {
-    margin-bottom: $unit;
-  }
   @media (min-width: $breakpoint-sm) {
     flex-basis: 100%;
   }
@@ -102,16 +98,24 @@ aside {
 
 
 
-hr {
-  //...
+.logo-bottom {
+  background: $white;
 }
 
+
+
+
+footer {
+  text-align: center;
+}
+
+
 a {
-  color: red;
+  color: $brand-color;
 
   &:focus,
   &:hover {
-    color: green;
+    color: $brand-color;
   }
 }
 

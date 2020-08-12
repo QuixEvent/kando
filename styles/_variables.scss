@@ -1,4 +1,8 @@
+$unit:                    1.6rem;
+
 $brand-color:             #0e4393;
+$grey-1:                  darken(#f5f4ef, 10%);
+
 
 $body-background-color:   #f5f4ef;
 $body-background-image:   url('/img/bg-pattern.png');
@@ -6,3 +10,9 @@ $body-font-family:        Raleway, Arial, sans-serif;
 
 
 $transition:              all 100ms ease-in-out;
+
+
+$breakpoint-sm:       768px;
+$breakpoint-sm-min:   $breakpoint-sm - 1px;
+$breakpoint-md:       1024px;
+$breakpoint-md-min:   $breakpoint-md - 1px;

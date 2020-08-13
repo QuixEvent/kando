@@ -62,6 +62,8 @@ body {
 
 
 .cell {
+  overflow: hidden;
+
   border-radius: $unit / 2;
   box-shadow: 0 0 $unit 0 $grey-1;
 }
@@ -81,8 +83,11 @@ body {
 //
 .cell-B {
   //...
+  padding-top: $unit;
   background: $grey-1;
   text-align: center;
+
+  opacity: .5;
 }
 
 
@@ -114,7 +119,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: $white;
+  background: rgba($white, .5);
 
   img {
     width: 14rem;

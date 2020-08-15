@@ -15,7 +15,7 @@
 //
 .embedd-container {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   height: 0;
   padding-bottom: 56.25%;
@@ -38,26 +38,32 @@
 //
 body {
   margin: $unit;
+
+  @media (min-width: $breakpoint-sm) {
+    margin: $unit * 3;
+  }
 }
 
 .grid {
-  width: calc(100vw - (#{$unit} * 2));
-  height: calc(100vh - (#{$unit} * 2));
-
   max-width: $app-max-width;
   margin-left: auto;
   margin-right: auto;
 
-  display: grid;
-  grid-gap: $unit;
-  grid-template-columns: 1fr 34rem;
-  grid-template-rows: 1fr 10rem;
+  @media (min-width: $breakpoint-md) {
+    display: grid;
+    grid-gap: $unit;
+    grid-template-columns: 1fr 32rem;
+    //grid-template-rows: 1fr 10rem;
 
-  @media (min-height: 1080px) {
-    height: auto;
-    min-height: 80rem;
-    margin-top: 6rem;
+    //width: calc(100vw - (#{$unit} * 6));
+    //height: calc(100vh - (#{$unit} * 6));
   }
+
+  //@media (min-height: 1080px) {
+  //  height: auto;
+  //  min-height: 80rem;
+  //  margin-top: 6rem;
+  //}
 }
 
 
@@ -66,6 +72,10 @@ body {
 
   border-radius: $unit / 2;
   box-shadow: 0 0 $unit 0 $grey-1;
+
+  @media (max-width: $breakpoint-md-min) {
+    margin-bottom: $unit;
+  }
 }
 
 
@@ -74,7 +84,13 @@ body {
 //
 .cell-A {
   //...
-  background: $black;
+  //background: $black;
+  background: transparent;
+  box-shadow: none;
+
+  @media (max-width: $breakpoint-md-min) {
+    order: 1;
+  }
 }
 
 
@@ -83,11 +99,12 @@ body {
 //
 .cell-B {
   //...
-  padding-top: $unit;
+  line-height: 0;
   background: $grey-1;
-  text-align: center;
 
-  opacity: .5;
+  @media (max-width: $breakpoint-md-min) {
+    order: 3;
+  }
 }
 
 
@@ -98,12 +115,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 80px;
 
+  font-size: $unit * 2;
   color: $white;
   text-align: center;
   font-weight: bold;
+  line-height: 1;
 
   background: $brand-color;
+
+  @media (max-width: $breakpoint-md-min) {
+    order: 2;
+  }
 
   span {
     color: #dbb574;
@@ -119,7 +143,14 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: rgba($white, .5);
+  @media (max-width: $breakpoint-md-min) {
+    order: 4;
+    box-shadow: none;
+    margin-top: $unit * 4;
+  }
+  @media (min-width: $breakpoint-md) {
+    background: rgba($white, .5);
+  }
 
   img {
     width: 14rem;

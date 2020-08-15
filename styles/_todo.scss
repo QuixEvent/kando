@@ -73,6 +73,13 @@ body {
   border-radius: $unit / 2;
   box-shadow: 0 0 $unit 0 $grey-1;
 
+  iframe {
+    overflow: hidden;
+    border-radius: $unit / 2;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+  }
+
+
   @media (max-width: $breakpoint-md-min) {
     margin-bottom: $unit;
   }

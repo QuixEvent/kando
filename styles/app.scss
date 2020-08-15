@@ -44,6 +44,7 @@ body {
   font-family: $body-font-family;
   font-size: $unit;
   line-height: 1.5;
+  color: $text-color;
 
   background-color: $body-background-color;
   background-image: $body-background-image;
@@ -53,12 +54,27 @@ body {
 
 
 footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding-top: $unit * 2;
   padding-bottom: $unit * 2;
   font-size: 1.4rem;
   text-align: center;
 
+  background: $white;
+
+
+  img {
+    width: 18rem;
+    margin-bottom: $unit;
+  }
+
   @media (min-width: $breakpoint-md) {
-    padding-top: $unit * 2;
+    img {
+      display: none;
+    }
   }
 }
 

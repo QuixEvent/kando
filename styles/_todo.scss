@@ -239,7 +239,8 @@ body {
   .value {
     font-family: Arial, sans-serif;
     font-size: $unit * 3;
-    color: $brand-color;
+    //color: $brand-color;
+    color: $white;
   }
 
   .label {

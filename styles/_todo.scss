@@ -120,7 +120,7 @@ body {
   align-items: center;
   min-height: 80px;
 
-  font-size: $unit * 2;
+  font-size: $unit * 1.5;
   color: $white;
   text-align: center;
   font-weight: bold;
@@ -130,6 +130,9 @@ body {
 
   @media (max-width: $breakpoint-md-min) {
     order: 2;
+  }
+  @media (min-width: $breakpoint-sm) {
+    font-size: $unit * 2;
   }
 
   span {

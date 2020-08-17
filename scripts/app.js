@@ -16,3 +16,9 @@ console.log('Hallow 🙏 World');
 //$(window).resize(function () {
 //  console.log('window ——— resized');
 //});
+
+
+
+//$(function() {
+//  //...
+//});

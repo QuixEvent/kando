@@ -51,6 +51,7 @@
                     mozallowfullscreen
                     allowFullScreen></iframe>
             </div>
+            <div id="clock"></div>
         </div>
         <div class="cell cell-B">
             <iframe
@@ -107,6 +108,27 @@
             href="//www.asahibreweries.eu/"
             target="_blank">Asahi CE &amp; Europe Services</a>
     </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.1.0/jquery.countdown.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.0/moment-timezone-with-data-2010-2020.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //
+            // eventTime = 10. 09. 2020 (10. září 2020)
+            //
+            var eventTime = moment.tz("2020-09-10 10:00", "Europe/Prague");
+
+             $('#clock').countdown(eventTime.toDate(), function(event) {
+                 var $this = $(this).html(event.strftime(''
+                 + '<div class="slot"><span class="value">%D</span> <span class="label">days</span></div>'
+                 + '<div class="slot"><span class="value">%H</span> <span class="label">hours</span></div>'
+                 + '<div class="slot"><span class="value">%M</span> <span class="label">minutes</span></div>'
+                 + '<div class="slot"><span class="value">%S</span> <span class="label">seconds</span></div>'));
+             });
+        });
+    </script>
     <script src="scripts/app.js"></script>
     <!--script>document.write('<link href="dist/app.css?v=0.002.'+ Math.floor(Math.random() * 100) +'" rel="stylesheet">');</script-->
 </body>

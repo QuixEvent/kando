@@ -86,7 +86,8 @@ body {
 //  Vimeo <iframe>
 //
 .cell-A {
-  //...
+  position: relative;
+
   background: $white;
   //box-shadow: none;
 
@@ -210,3 +211,39 @@ body {
   }
 }
 
+
+
+//
+//  countdown
+//
+#clock {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba($black, .8);
+
+  .slot {
+    flex-basis: 8rem;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+  }
+
+  .value {
+    font-family: Arial, sans-serif;
+    font-size: $unit * 3;
+    color: $brand-color;
+  }
+
+  .label {
+    color: $grey-1;
+  }
+
+}

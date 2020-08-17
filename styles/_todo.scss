@@ -72,7 +72,7 @@ body {
   overflow: hidden;
 
   border-radius: $radius;
-  box-shadow: 0 0 $unit 0 $grey-1;
+  box-shadow: $cell-box-shadow;
 
   iframe {
     overflow: hidden;
@@ -87,9 +87,8 @@ body {
 //
 .cell-A {
   //...
-  //background: $black;
-  background: transparent;
-  box-shadow: none;
+  background: $white;
+  //box-shadow: none;
 
   @media (max-width: $breakpoint-md-min) {
     order: 1;

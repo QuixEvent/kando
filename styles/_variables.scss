@@ -10,9 +10,10 @@ $body-background-color:   #f5f4ef;
 $body-background-image:   url('../img/bg-pattern.png');
 $body-font-family:        Raleway, Arial, sans-serif;
 
-//$radius:                  $unit / 2;
-$radius:                  0;
+$radius:                  $unit / 2;
+//$radius:                  0;
 
+$cell-box-shadow:         0 0 $unit 0 $grey-1;
 $transition:              all 100ms ease-in-out;
 
 

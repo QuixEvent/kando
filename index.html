@@ -64,6 +64,28 @@
         <div class="cell cell-C">
             <span>[kando]</span>&nbsp;conference
         </div>
+        <!--div class="cell">
+            <div class="value-label">
+                <span>eventTime</span>
+                <div class="dev__eventTime"></div>
+            </div>
+            <div class="value-label">
+                <span>eventTimeZone</span>
+                <div class="dev__eventTimeZone"></div>
+            </div>
+            <div class="value-label">
+                <span>currentTime</span>
+                <div class="dev__currentTime"></div>
+            </div>
+            <div class="value-label">
+                <span>currentTimeZone</span>
+                <div class="dev__currentTimeZone"></div>
+            </div>
+            <div class="value-label">
+                <span>isBeforeEvent</span>
+                <div class="dev__isBeforeEvent"></div>
+            </div>
+        </div-->
         <div class="cell cell-D">
             <img src="img/asahi.svg" alt="Asahi">
         </div>
@@ -118,18 +140,40 @@
             //
             // eventTime = 10. 09. 2020 (10. září 2020)
             //
-            //var eventTime = moment.tz("2020-09-10 10:00", "Europe/Prague");
-            var eventTime = moment.tz("2020-08-18 12:24", "Europe/Prague");
+            var eventTime = moment.tz("2020-09-10 10:00", "Europe/Prague");
+            //var eventTime = moment.tz("2020-08-18 16:13", "Europe/Prague");
 
-            $('#clock').countdown(eventTime.toDate(), function(event) {
-                var $this = $(this).html(event.strftime(''
-                + '<div class="slot"><span class="value">%D</span> <span class="label">days</span></div>'
-                + '<div class="slot"><span class="value">%H</span> <span class="label">hours</span></div>'
-                + '<div class="slot"><span class="value">%M</span> <span class="label">minutes</span></div>'
-                + '<div class="slot"><span class="value">%S</span> <span class="label">seconds</span></div>'));
-            }).on('finish.countdown', function() {
-                $(this).hide();
-            });
+//
+//  DEV
+//
+$(".dev__eventTime").text(eventTime);
+
+var currentTime = moment();
+$(".dev__currentTime").text(currentTime);
+
+var isBeforeEvent = currentTime.isBefore( eventTime );
+$(".dev__isBeforeEvent").text(isBeforeEvent);
+
+var eventTimeZone = eventTime.format('Z');
+$(".dev__eventTimeZone").text(eventTimeZone);
+
+var currentTimeZone = moment().format('Z');
+$(".dev__currentTimeZone").text(currentTimeZone);
+
+
+            if(isBeforeEvent) {
+                $('#clock').addClass("is-active");
+
+                $('#clock').countdown(eventTime.toDate(), function(event) {
+                    var $this = $(this).html(event.strftime(''
+                    + '<div class="slot"><span class="value">%D</span> <span class="label">days</span></div>'
+                    + '<div class="slot"><span class="value">%H</span> <span class="label">hours</span></div>'
+                    + '<div class="slot"><span class="value">%M</span> <span class="label">minutes</span></div>'
+                    + '<div class="slot"><span class="value">%S</span> <span class="label">seconds</span></div>'));
+                }).on('finish.countdown', function() {
+                    $(this).hide();
+                });
+            }
         });
     </script>
     <script src="scripts/app.js"></script>

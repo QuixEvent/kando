@@ -138,7 +138,7 @@ body {
     padding-bottom: $unit * 2;
 
     font-size: $unit * 1.5;
-    
+
     div {
       display: inline-block;
     }
@@ -285,6 +285,7 @@ body {
   justify-content: center;
 
   background: rgba($black, .8);
+  backdrop-filter: blur(.4rem);
 
   .slot {
     flex-basis: 8rem;

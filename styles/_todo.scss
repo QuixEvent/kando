@@ -41,6 +41,7 @@ body {
 
   @media (min-width: $breakpoint-sm) {
     margin: $unit * 3;
+    margin-top: $unit * 8;
   }
 }
 
@@ -376,4 +377,57 @@ body {
 }
 
 
+
+
+
+
+
+//
+//  Header on top
+//
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+
+  padding-left: $unit * 3;
+  padding-right: $unit * 3;
+
+  background: $white;
+
+  img {
+    width: 9rem;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: $app-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  height: 7.4rem;
+}
+
+
+nav {
+  a {
+    padding: 1.4rem .8vw;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #3b3d40;
+
+    &:hover {
+      color: #c39a12;
+    }
+  }
+}
 

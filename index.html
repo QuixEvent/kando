@@ -24,8 +24,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="visually-hidden">
-        <h1>Kando conference</h1>
+    <header>
+        <div class="header__container">
+            <div style="display: flex; line-height: 1.35;">
+                <img src="img/asahi.svg" alt="Asahi">
+                <div style="margin-left: 2rem; padding-left: 2rem; border-left: 1px solid lightgrey;">Marketing conference <br>& Kando Awards 2020</div>
+            </div>
+            <nav>
+                <a href="#schedule">External speakers</a>
+                <a href="#speakers">Speakers</a>
+            </nav>
+        </div>
     </header>
     <div class="grid">
         <div class="cell cell-A">
@@ -71,7 +80,9 @@
         </div>
     </div>
 
-    <section class="schedule">
+    <section
+        class="schedule"
+        id="schedule">
         <h2>
             Schedule
         </h2>
@@ -176,7 +187,9 @@
             </div>
         </div>
     </section>
-    <section class="schedule speaker">
+    <section
+        class="schedule speaker"
+        id="speakers">
         <h2>
             Speakers
         </h2>

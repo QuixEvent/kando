@@ -273,6 +273,36 @@ body {
 
 
 //
+//  Speakers
+//
+.speaker {
+  h3 {
+    margin-bottom: $unit;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: $unit / 4;
+    overflow: hidden;
+  }
+  p {
+    margin: 0;
+  }
+
+  &__info {
+
+    @media (min-width: $breakpoint-sm) {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-gap: $unit;
+    }
+  }
+}
+
+
+
+//
 //  countdown
 //
 #clock {

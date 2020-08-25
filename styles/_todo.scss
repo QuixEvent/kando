@@ -284,7 +284,8 @@ body {
     max-width: 100%;
     height: auto;
 
-    border-radius: $unit / 4;
+    //border-radius: $unit / 4;
+    border-radius: 0;
     overflow: hidden;
   }
   p {
@@ -396,6 +397,7 @@ header {
   padding-right: $unit * 3;
 
   background: $white;
+  box-shadow: $cell-box-shadow;
 
   img {
     width: 9rem;

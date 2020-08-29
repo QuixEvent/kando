@@ -139,121 +139,40 @@
 //
 //  schedule
 //
-.schedule {
+.l-section {
   //...
   max-width: $breakpoint-sm;
   margin-left: auto;
   margin-right: auto;
   margin-top: $unit * 5;
   margin-bottom: $unit * 5;
+}
 
 
-  //
-  //  section title
-  //
-  h2 {
-    //...
-  }
+.white-box {
+  padding: $unit * 2.5;
+  overflow: hidden;
 
-  //
-  //  day title
-  //
-  h3 {
-    //...
-  }
+  box-shadow: $cell-box-shadow;
+  border-radius: $radius;
+  background: $white;
 
-
-  &__container {
-    overflow: hidden;
-    background: $white;
-    border-radius: $radius;
-    box-shadow: $cell-box-shadow;
-  }
-
-
-  &__day {
-    margin: 4rem;
-  }
-
-  &__day--one {
-    //background: $white;
-  }
-  /*
-  &__day--two {
-    color: $white;
-    background: $brand-color;
-
-    h3 {
-      color: $white;
-    }
-
-    .schedule__time {
-      color: $white;
-    }
-  }
-  */
-
-  ul {
-    padding-left: 0;
-    list-style-type: none;
-  }
-
-  li {
-    margin-top: $unit * 1.5;
-
-    @media (min-width: $breakpoint-sm) {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  &__time {
-    display: block;
-
-    @media (min-width: $breakpoint-sm) {
-      flex-basis: 18rem;
-      flex-shrink: 0;
-      font-size: $unit * 1.5;
-    }
-  }
-
-  &__description {
-    @media (min-width: $breakpoint-sm) {
-      font-size: $unit * 1.5;
+  &__item {
+    margin-bottom: $unit * 3;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
 
 
-//
-//  Speakers
-//
-.speaker {
-  h3 {
-    margin-bottom: $unit;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
 
-    //border-radius: $unit / 4;
-    border-radius: 0;
-    overflow: hidden;
-  }
-  p {
-    margin: 0;
-  }
 
-  &__info {
 
-    @media (min-width: $breakpoint-sm) {
-      display: grid;
-      grid-template-columns: 30% 70%;
-      grid-gap: $unit;
-    }
-  }
-}
+
+
+
 
 
 

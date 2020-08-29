@@ -36,19 +36,6 @@
 //
 //  grid
 //
-body {
-  margin: $unit;
-
-  @media (max-width: $breakpoint-sm-min) {
-    margin-top: 10rem;
-  }
-
-  @media (min-width: $breakpoint-sm) {
-    margin: $unit * 3;
-    margin-top: $unit * 8;
-  }
-}
-
 .grid {
   display: grid;
   grid-gap: $unit;

@@ -39,6 +39,10 @@
 body {
   margin: $unit;
 
+  @media (max-width: $breakpoint-sm-min) {
+    margin-top: 10rem;
+  }
+
   @media (min-width: $breakpoint-sm) {
     margin: $unit * 3;
     margin-top: $unit * 8;
@@ -393,14 +397,19 @@ header {
   z-index: 2;
   width: 100%;
 
-  padding-left: $unit * 3;
-  padding-right: $unit * 3;
+  padding-left: $unit;
+  padding-right: $unit;
 
   background: $white;
   box-shadow: $cell-box-shadow;
 
   img {
     width: 9rem;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    padding-left: $unit * 3;
+    padding-right: $unit * 3;
   }
 }
 

@@ -1,0 +1,32 @@
+//
+//  Schedule
+//
+.schedule {
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    margin-top: $unit;
+
+    @media (min-width: $breakpoint-sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__time {
+    display: block;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-basis: 18rem;
+      flex-shrink: 0;
+      font-size: $unit * 1.5;
+    }
+  }
+
+  &__description {
+    @media (min-width: $breakpoint-sm) {
+      font-size: $unit * 1.5;
+    }
+  }
+}

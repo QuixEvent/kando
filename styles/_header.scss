@@ -19,8 +19,12 @@
   }
 
   @media (min-width: $breakpoint-sm) {
-    padding-left: $unit * 3;
+    padding-left: $unit * 4;
     padding-right: $unit * 3;
+  }
+  @media (min-width: $breakpoint-lg) {
+    padding-left: $unit * 8;
+    padding-right: $unit * 8;
   }
 
 
@@ -36,10 +40,24 @@
     margin-left: auto;
     margin-right: auto;
     height: 7.4rem;
+  }
 
-    .header__brand {
-      display: flex;
-      line-height: 1.35;
+
+  &__brand {
+    display: flex;
+    line-height: 1.35;
+  }
+
+
+  &__event-name {
+    display: none;
+
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid lightgrey;
+
+    @media (min-width: $breakpoint-sm) {
+      display: block;
     }
   }
 

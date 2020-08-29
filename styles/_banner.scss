@@ -18,8 +18,8 @@
 
   background: $brand-color;
 
-  @media (max-width: $breakpoint-md-min) {
-    order: 2;
+  @media (max-width: $breakpoint-sm-min) {
+    display: block;
   }
   @media (min-width: $breakpoint-sm) {
     padding-top: $unit * 2;

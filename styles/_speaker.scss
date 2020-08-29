@@ -1,0 +1,31 @@
+//
+//  Speaker
+//
+.speaker {
+  h3 {
+    margin-bottom: $unit;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+
+    //border-radius: $unit / 4;
+    border-radius: 0;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-sm-min) {
+      margin-bottom: $unit;
+    }
+  }
+  p {
+    margin: 0;
+  }
+
+  &__info {
+    @media (min-width: $breakpoint-sm) {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      grid-gap: $unit * 1.5;
+    }
+  }
+}

@@ -57,6 +57,10 @@ body {
 
 
 
+
+//
+//  Typography
+//
 a {
   color: $brand-color;
 
@@ -69,6 +73,34 @@ a {
 
 h1 {
   color: $brand-color;
+}
+
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 4rem;
+
+  text-align: center;
+  font-size: $unit * 2;
+  line-height: 1.5;
+  color: $brand-color;
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: $unit * 3;
+  }
+}
+
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: $unit * 1.5;
+  color: $brand-color;
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: $unit * 2;
+  }
 }
 
 

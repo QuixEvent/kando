@@ -152,25 +152,14 @@
   //  section title
   //
   h2 {
-    margin-top: 0;
-    margin-bottom: 4rem;
-
-    text-align: center;
-    font-size: 5.2rem;
-    color: $brand-color;
-    //color: $text-color;
+    //...
   }
 
   //
   //  day title
   //
   h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-
-    font-size: 2.8rem;
-    color: $brand-color;
-    //color: $text-color;
+    //...
   }
 
 
@@ -183,7 +172,7 @@
 
 
   &__day {
-    padding: 4rem;
+    margin: 4rem;
   }
 
   &__day--one {
@@ -210,20 +199,28 @@
   }
 
   li {
-    display: flex;
-    align-items: center;
     margin-top: $unit * 1.5;
+
+    @media (min-width: $breakpoint-sm) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__time {
-    flex-basis: 18rem;
-    flex-shrink: 0;
-    font-size: 2.4rem;
-    //color: $brand-color;
+    display: block;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-basis: 18rem;
+      flex-shrink: 0;
+      font-size: $unit * 1.5;
+    }
   }
 
   &__description {
-    font-size: 2rem;
+    @media (min-width: $breakpoint-sm) {
+      font-size: $unit * 1.5;
+    }
   }
 }
 

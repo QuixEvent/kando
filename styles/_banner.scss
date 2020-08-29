@@ -1,0 +1,44 @@
+//
+//  banner
+//
+.banner {
+  padding: $unit;
+  margin-bottom: $unit;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //min-height: 80px;
+
+  text-align: center;
+  font-size: $unit * 1.25;
+  color: $white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+
+  background: $brand-color;
+
+  @media (max-width: $breakpoint-md-min) {
+    order: 2;
+  }
+  @media (min-width: $breakpoint-sm) {
+    padding-top: $unit * 2;
+    padding-bottom: $unit * 2;
+
+    font-size: $unit * 1.5;
+
+    div {
+      display: inline-block;
+    }
+  }
+  @media (min-width: $app-max-width) {
+    font-size: $unit * 2;
+  }
+
+  span {
+    //color: #dbb574;
+    background: -webkit-linear-gradient(0deg, #faed91, #b1792d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

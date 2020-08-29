@@ -1,0 +1,79 @@
+//
+//  RESET
+//
+:root {
+  font-size: 62.5%;
+}
+
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: $unit;
+
+  font-family: $body-font-family;
+  font-size: $unit;
+  line-height: 1.5;
+  color: $text-color;
+
+  background-color: $body-background-color;
+  background-image: $body-background-image;
+
+
+  @media (max-width: $breakpoint-sm-min) {
+    margin-top: 10rem;
+  }
+  @media (min-width: $breakpoint-sm) {
+    margin: $unit * 3;
+    margin-top: $unit * 8;
+  }
+}
+
+
+
+a {
+  color: $brand-color;
+
+  &:focus,
+  &:hover {
+    color: $brand-color;
+  }
+}
+
+
+h1 {
+  color: $brand-color;
+}
+
+
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+

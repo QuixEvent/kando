@@ -17,15 +17,21 @@
       margin-bottom: $unit;
     }
   }
-  p {
-    margin: 0;
-  }
 
   &__info {
     @media (min-width: $breakpoint-sm) {
       display: grid;
       grid-template-columns: 30% 1fr;
       grid-gap: $unit * 1.5;
+    }
+  }
+
+  &__description {
+    p {
+      margin: 0;
+      margin-bottom: $unit;
+
+      &:last-child { margin-bottom: 0; }
     }
   }
 }

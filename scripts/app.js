@@ -1,10 +1,11 @@
-console.log('Hallow 🙏 World');
+//console.log('Hallow 🙏 World');
 
 
 //
 //  DOM ready
 //
-//  console.log('DOM ——— ready');
+//$(function() {
+//  //...
 //});
 
 

@@ -50,7 +50,8 @@
                         allow="autoplay; fullscreen"
                         webkitAllowFullScreen
                         mozallowfullscreen
-                        allowFullScreen></iframe>
+                        allowFullScreen
+                        id="vimeo-player-iframe"></iframe>
                 </div>
                 <div id="clock"></div>
             </div>
@@ -256,25 +257,14 @@
             //
             var eventTime = moment.tz("2020-09-10 16:00", "Europe/Prague");
             //var eventTime = moment.tz("2020-08-20 14:46", "Europe/Prague");
+            var currentTime = moment();
+            var isBeforeEvent = currentTime.isBefore( eventTime );
+            var eventTimeZone = eventTime.format('Z');
+            var currentTimeZone = moment().format('Z');
 
-//
-//  DEV
-//
-$(".dev__eventTime").text(eventTime);
-
-var currentTime = moment();
-$(".dev__currentTime").text(currentTime);
-
-var isBeforeEvent = currentTime.isBefore( eventTime );
-$(".dev__isBeforeEvent").text(isBeforeEvent);
-
-var eventTimeZone = eventTime.format('Z');
-$(".dev__eventTimeZone").text(eventTimeZone);
-
-var currentTimeZone = moment().format('Z');
-$(".dev__currentTimeZone").text(currentTimeZone);
-
-
+            //
+            //  Show countdown if event hasn't started yet
+            //
             if(isBeforeEvent) {
                 $('#clock').addClass("is-active");
 
@@ -288,6 +278,15 @@ $(".dev__currentTimeZone").text(currentTimeZone);
                     $(this).hide();
                 });
             }
+
+            //
+            //  DEV – test date time
+            //
+            //$(".dev__eventTime").text(eventTime);
+            //$(".dev__currentTime").text(currentTime);
+            //$(".dev__isBeforeEvent").text(isBeforeEvent);
+            //$(".dev__eventTimeZone").text(eventTimeZone);
+            //$(".dev__currentTimeZone").text(currentTimeZone);
         });
     </script>
     <script src="scripts/app.js"></script>

@@ -11,7 +11,8 @@
   padding-left: $unit;
   padding-right: $unit;
 
-  background: $white;
+  //background: $white;
+  background: $brand-color;
   box-shadow: $cell-box-shadow;
 
   img {
@@ -74,7 +75,9 @@
       text-transform: uppercase;
       text-decoration: none;
 
-      color: #3b3d40;
+      //color: #3b3d40; // gray
+      color: $white;
+      transition: color 150ms ease-in-out;
 
       &:hover {
         color: #c39a12;

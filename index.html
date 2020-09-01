@@ -279,6 +279,7 @@
             //  Show countdown if event hasn't started yet
             //
             if(isBeforeEvent) {
+                $('body').addClass("is-before-event");
                 $('#clock').addClass("is-active");
 
                 $('#clock').countdown(eventTime.toDate(), function(event) {

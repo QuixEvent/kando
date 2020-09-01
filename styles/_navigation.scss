@@ -2,7 +2,20 @@
 //  navigation
 //
 .nav {
-  //...
+  @media (max-width: $breakpoint-sm-min) {
+    display: none;
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    padding: $unit;
+
+    background: $brand-color;
+
+    &.open {
+      display: block;
+    }
+  }
 
   a {
     padding: 1.4rem .8vw;
@@ -19,6 +32,11 @@
     &:hover {
       color: #c39a12;
     }
+
+    @media (max-width: $breakpoint-sm-min) {
+      display: block;
+      text-align: center;
+    }
   }
 
   //
@@ -34,6 +52,10 @@
 
     outline: none;
     background: transparent;
+
+    @media (min-width: $breakpoint-sm) {
+      display: none;
+    }
 
     span {
       position: relative;

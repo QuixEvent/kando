@@ -5,7 +5,6 @@
   font-size: 62.5%;
 }
 
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -15,7 +14,7 @@ html {
   &,
   &::before,
   &::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 }
 

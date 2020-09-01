@@ -33,10 +33,10 @@
             <button type="button" class="nav__opener">
                 <span>Menu</span>
             </button>
-            <nav class="nav">
+            <!--nav class="nav">
                 <a href="#schedule">Schedule</a>
                 <a href="#speakers">External speaker</a>
-            </nav>
+            </nav-->
         </div>
     </header>
     <section class="above-the-fold">
@@ -290,6 +290,13 @@
             //$(".dev__isBeforeEvent").text(isBeforeEvent);
             //$(".dev__eventTimeZone").text(eventTimeZone);
             //$(".dev__currentTimeZone").text(currentTimeZone);
+
+            //
+            //  Menu
+            //
+            $('.nav__opener').click(function() {
+              $(this).toggleClass('active');
+            });
         });
     </script>
     <script src="scripts/app.js"></script>

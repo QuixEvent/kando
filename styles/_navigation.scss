@@ -25,23 +25,22 @@
   //  Hamburger
   //
   &__opener {
-    padding: 14px 0;
-    height: 30px;
-    margin-top: 16px;
-
+    display: inline-block;
     font-size: 0;
     border: 0;
+    height: 0;
+    padding: 14px 0;
     cursor: pointer;
+
     outline: none;
     background: transparent;
 
     span {
+      position: relative;
       display: inline-block;
       border-top: 4px solid $white;
       width: 30px;
-      position: relative;
       transition: border-top-color 0s .3s;
-
 
       &::before,
       &::after {
@@ -63,6 +62,27 @@
       &::after {
         bottom: -8px;
         transition: bottom .3s .3s,transform .3s;
+      }
+    }
+
+    //
+    // Open menu
+    //
+    &.active {
+      span {
+        border-top-color: $brand-color;
+        transition: border-top-color 0s .3s;
+
+        &::before {
+          top: -4px;
+          transform: rotate(45deg);
+          transition: top .3s,transform .3s .3s;
+        }
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+          transition: bottom .3s,transform .3s .3s;
+        }
       }
     }
   }

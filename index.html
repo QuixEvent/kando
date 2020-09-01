@@ -34,13 +34,15 @@
                 <span>Menu</span>
             </button>
             <nav class="nav">
+                <a href="#banner" class="visible-mobile-only">Live stream</a>
+                <a href="#slido" class="visible-mobile-only">Ask the speaker</a>
                 <a href="#schedule">Schedule</a>
                 <a href="#speakers">External speaker</a>
             </nav>
         </div>
     </header>
     <section class="above-the-fold">
-        <div class="banner">
+        <div class="banner" id="banner">
             Marketing Conference&nbsp;<div>&&nbsp;<span>Kando Awards 2020</span></div>
         </div>
         <div class="grid">
@@ -64,7 +66,8 @@
                     height="100%"
                     width="100%"
                     frameborder="0"
-                    style="min-height: 480px;"></iframe>
+                    style="min-height: 480px;"
+                    id="slido"></iframe>
             </div>
             <!--
             <div class="cell cell-C">
@@ -297,6 +300,14 @@
             $('.nav__opener').click(function() {
               $(this).toggleClass('active');
               $('.nav').toggleClass('open');
+            });
+
+            //
+            //  Handle Nav item click
+            //
+            $('.nav a').click(function() {
+              $('.nav__opener').removeClass('active');
+              $('.nav').removeClass('open');
             });
         });
     </script>

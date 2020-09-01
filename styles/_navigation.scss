@@ -8,9 +8,11 @@
     top: $header-height;
     left: 0;
     right: 0;
+    z-index: 100;
     padding: $unit;
 
     background: $brand-color;
+    border-top: 1px solid rgba($white, .3);
 
     &.open {
       display: block;

@@ -7,3 +7,11 @@
   white-space: nowrap;
   width: 1px;
 }
+
+
+.visible-mobile-only {
+  display: none;
+  @media (max-width: $breakpoint-sm-min) {
+    display: block;
+  }
+}

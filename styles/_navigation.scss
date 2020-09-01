@@ -1,0 +1,69 @@
+//
+//  navigation
+//
+.nav {
+  //...
+
+  a {
+    padding: 1.4rem .8vw;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    //color: #3b3d40; // gray
+    color: $white;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+      color: #c39a12;
+    }
+  }
+
+  //
+  //  Hamburger
+  //
+  &__opener {
+    padding: 14px 0;
+    height: 30px;
+    margin-top: 16px;
+
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+
+    span {
+      display: inline-block;
+      border-top: 4px solid $white;
+      width: 30px;
+      position: relative;
+      transition: border-top-color 0s .3s;
+
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 4px;
+
+        background-color: $white;
+        opacity: 1;
+      }
+
+      &::before {
+        top: -12px;
+        transition: top .3s .3s,transform .3s;
+      }
+      &::after {
+        bottom: -8px;
+        transition: bottom .3s .3s,transform .3s;
+      }
+    }
+  }
+}

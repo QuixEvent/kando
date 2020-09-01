@@ -61,27 +61,4 @@
       display: block;
     }
   }
-
-
-  //
-  //  navigation
-  //
-  &__nav {
-    a {
-      padding: 1.4rem .8vw;
-
-      font-weight: 700;
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      text-decoration: none;
-
-      //color: #3b3d40; // gray
-      color: $white;
-      transition: color 150ms ease-in-out;
-
-      &:hover {
-        color: #c39a12;
-      }
-    }
-  }
 }

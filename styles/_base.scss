@@ -40,7 +40,7 @@ body {
 
 
   @media (max-width: $breakpoint-sm-min) {
-    margin-top: 10rem;
+    margin-top: 9rem;
   }
   @media (min-width: $breakpoint-sm) {
     margin: $unit * 4;
@@ -55,6 +55,16 @@ body {
 }
 
 
+
+.above-the-fold-container {
+  @media (min-width: $breakpoint-lg) {
+    min-height: calc(100vh - (#{$unit} * 12));
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 
 //

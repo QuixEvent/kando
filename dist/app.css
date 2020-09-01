@@ -36,7 +36,7 @@ body {
       margin: 12.8rem;
       margin-bottom: 0; } }
 
-@media (min-width: 1170px) {
+@media (min-width: 1024px) {
   .above-the-fold-container {
     min-height: calc(100vh - (1.6rem * 12));
     display: flex;

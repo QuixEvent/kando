@@ -57,7 +57,7 @@ body {
 
 
 .above-the-fold-container {
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpoint-md) {
     min-height: calc(100vh - (#{$unit} * 12));
     display: flex;
     flex-basis: 100%;

@@ -2,7 +2,6 @@
 //  navigation
 //
 .nav {
-  @media (max-width: $breakpoint-sm-min) {
     display: none;
     position: fixed;
     top: $header-height;
@@ -11,6 +10,8 @@
     z-index: 100;
     padding: $unit;
 
+    text-align: center;
+
     background: $brand-color;
     border-top: 1px solid rgba($white, .3);
 
@@ -18,9 +19,10 @@
       display: block;
       box-shadow: none;
     }
-  }
+
 
   a {
+    display: block;
     padding: 1.4rem .8vw;
 
     font-weight: 700;
@@ -32,13 +34,14 @@
     color: $white;
     transition: color 150ms ease-in-out;
 
-    &:hover {
-      color: #c39a12;
+    &.nav-live-stream {
+      @media (min-width: $breakpoint-sm) {
+        display: none;
+      }
     }
 
-    @media (max-width: $breakpoint-sm-min) {
-      display: block;
-      text-align: center;
+    &:hover {
+      color: #c39a12;
     }
   }
 
@@ -55,10 +58,6 @@
 
     outline: none;
     background: transparent;
-
-    @media (min-width: $breakpoint-sm) {
-      display: none;
-    }
 
     span {
       position: relative;

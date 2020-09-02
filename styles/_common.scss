@@ -15,3 +15,18 @@
     display: block;
   }
 }
+
+
+.visible-tablet-only {
+  display: none;
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md-min) {
+    display: inline-block;
+  }
+}
+
+.visible-desktop-only {
+  display: none;
+  @media (min-width: $breakpoint-md) {
+    display: inline-block;
+  }
+}

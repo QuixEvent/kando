@@ -61,5 +61,22 @@
     @media (min-width: $breakpoint-sm) {
       display: block;
     }
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: $unit * 1.5;
+      line-height: 1;
+
+      br { display: none; }
+
+      .text-gradient {
+        @media (min-width: $breakpoint-md) {
+          background: -webkit-linear-gradient(0deg, #faed91, #b1792d);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
   }
 }

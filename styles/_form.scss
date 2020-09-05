@@ -31,13 +31,15 @@ button, input, select, textarea {
 input,
 textarea,
 select {
+  -webkit-appearance: none;
+
   width: 100%;
   padding: 1.2rem;
 
   color: $text-color;
   background: $white;
   border: 1px solid darken($white, 40%);
-  //border-radius: $unit / 4;
+  border-radius: 0;
 }
 
 
@@ -112,9 +114,13 @@ input[type="file"] {
 
 
 .submit-button {
+  -webkit-appearance: none;
+
   width: auto;
+  height: 4.3rem;
   margin-right: $unit * 2;
-  padding: ($unit / 2) $unit;
+  padding: 0 $unit;
+  line-height: 4.3rem;
   cursor: pointer;
 
   font-weight: bold;

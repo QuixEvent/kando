@@ -48,96 +48,6 @@
             </nav>
         </div>
     </header>
-
-
-    <section class="l-section">
-
-        <h2>
-            Share your photo
-        </h2>
-        <div class="white-box">
-
-
-
-<!--
-
-    Plain form
-
--->
-            <form
-                id='upload_form'
-                action='https://api.fotomasterltd.net/photo-mosaic-booth/user_upload.php'
-                method='post'
-                enctype='multipart/form-data'>
-                <div class="form-row">
-                    <label for="Filedata">
-                        Choose a photo
-                    </label>
-                    <div class="custom-file">
-                        <input
-                            type='file'
-                            name='Filedata'
-                            id='Filedata'
-                            class="custom-file__input"
-                            required>
-                        <div class="custom-file__label"></div>
-                        <button
-                            type="button"
-                            class="custom-file__button">
-                            Browse
-                        </button>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="form__title">
-                        Title
-                    </label>
-                    <input
-                        type="text"
-                        name="title"
-                        class="input"
-                        id="form__title">
-                </div>
-                <!--
-                <div class="form-row">
-                    <label for="form__message">
-                        Enter story
-                    </label>
-                    <textarea
-                        name="message"
-                        form="upload_form"
-                        id="form__message"></textarea>
-                </div>
-                -->
-                <div class="form-row">
-                    <input type='submit' value='Send photo' name='submit' class="submit-button">
-                    <input type='hidden' name='pid' value='1236199'>
-                    <input type='hidden' name='eventName' value='1599208057446-ASAHI_Button_UPload_test_01'>
-                    <input type='hidden' name='weakPassword' value='fotomaster_browse'>
-                    <input type='hidden' name='redirect_url' value='https://mini-mali.github.io/kando/'>
-                </div>
-            </form>
-
-
-<!--
-
-    MOSAIC – <iframe>
-
--->
-            <!--iframe
-                width='100%'
-                height='360'
-                style='border:none;'
-                id="photo-mosaic-iframe"
-                src='https://api.fotomasterltd.net/photo-mosaic-booth/interactive//embed/index.php?pid=1236199&eventName=1599208057446-ASAHI_Button_UPload_test_01&isTitle=true&isMessage=true&redirectUrl=https%3A%2F%2Fmini-mali.github.io%2Fkando%2Fsuccess.html'></iframe-->
-                <!--src='https://api.fotomasterltd.net/photo-mosaic-booth/interactive//embed/index.php?pid=1236199&eventName=1599208057446-ASAHI_Button_UPload_test_01&isTitle=true&isMessage=true&redirectUrl=http%3A%2F%2F127.0.0.1%3A8080%2Fsuccess.html'></iframe-->
-        </div>
-    </section>
-
-
-
-
-
     <div class="above-the-fold-container">
         <section class="above-the-fold">
             <div
@@ -288,8 +198,7 @@
     </section>
     <section
         class="l-section"
-        id="speakers"
-        style="margin-bottom: 2rem;">
+        id="speakers">
         <h2>
             External speaker
         </h2>
@@ -317,7 +226,68 @@
             </div>
         </div>
     </section>
-
+    <section
+        class="l-section"
+        style="margin-bottom: 2rem;">
+        <h2>
+            Share your photo
+        </h2>
+        <div class="white-box">
+            <form
+                id='upload_form'
+                action='https://api.fotomasterltd.net/photo-mosaic-booth/user_upload.php'
+                method='post'
+                enctype='multipart/form-data'>
+                <div class="form-row">
+                    <label for="Filedata">
+                        Choose a photo
+                    </label>
+                    <div class="custom-file">
+                        <input
+                            type='file'
+                            name='Filedata'
+                            id='Filedata'
+                            class="custom-file__input"
+                            required>
+                        <div class="custom-file__label"></div>
+                        <button
+                            type="button"
+                            class="custom-file__button">
+                            Browse
+                        </button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="form__title">
+                        Title
+                    </label>
+                    <input
+                        type="text"
+                        name="title"
+                        class="input"
+                        id="form__title">
+                </div>
+                <!--
+                <div class="form-row">
+                    <label for="form__message">
+                        Enter story
+                    </label>
+                    <textarea
+                        name="message"
+                        form="upload_form"
+                        id="form__message"></textarea>
+                </div>
+                -->
+                <div class="form-row">
+                    <input type='submit' value='Send photo' name='submit' class="submit-button">
+                    <input type='hidden' name='pid' value='1236199'>
+                    <input type='hidden' name='eventName' value='1599208057446-ASAHI_Button_UPload_test_01'>
+                    <input type='hidden' name='weakPassword' value='fotomaster_browse'>
+                    <input type='hidden' name='redirect_url' value='https://mini-mali.github.io/kando/'>
+                </div>
+            </form>
+        </div>
+    </section>
     <footer>
         <img
             src="img/asahi.svg"

@@ -190,5 +190,10 @@
 
 
 
-
+#share-your-photo h2 {
+  //font-size: $unit * 1.5;
+  @media (max-width: $breakpoint-sm-min) { line-height: 1.25; }
+  @media (min-width: $breakpoint-sm) { font-size: 3.8rem; }
+  @media (min-width: $breakpoint-lg) { font-size: 4.4rem; }
+}
 

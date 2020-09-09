@@ -10,12 +10,25 @@
   align-items: center;
   justify-content: center;
 
-  background: rgba($black, .8);
-  backdrop-filter: blur(.4rem);
+  background-color: $brand-color;
+  background-position: 50% 50%;
+  background-repear: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $breakpoint-sm-min) {
+    background-image: url('../img/bg-countdown--mobile.png');
+  }
+  @media (min-width: $breakpoint-sm) {
+    background-image: url('../img/bg-countdown.png');
+  }
+
 
   .slot {
     flex-basis: 8rem;
     text-align: center;
+
+    position: relative;
+    top: 1rem;
   }
 
   span {

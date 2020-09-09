@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Marketing Conference & Kando Awards 2020</title>
     <meta name="description" content="Marketing Conference & Kando Awards 2020">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes">
 
     <!-- FAVICONS -->
@@ -335,7 +334,8 @@
             //
             // eventTime = 10. 09. 2020 (10. září 2020)
             //
-            var eventTime = moment.tz("2020-09-10 16:00", "Europe/Prague");
+var eventTime = moment.tz("2020-09-10 16:00", "Europe/Prague");
+            var eventTime = moment.tz("2020-09-09 09:44", "Europe/Prague");
             //var eventTime = moment.tz("2020-08-20 14:46", "Europe/Prague");
             var currentTime = moment();
             var isBeforeEvent = currentTime.isBefore( eventTime );
@@ -356,7 +356,9 @@
                     + '<div class="slot"><span class="value">%M</span> <span class="label">minutes</span></div>'
                     + '<div class="slot"><span class="value">%S</span> <span class="label">seconds</span></div>'));
                 }).on('finish.countdown', function() {
-                    $(this).hide();
+                    // hide Countdown
+                    $(this).fadeOut();
+                    $('body').removeClass("is-before-event");
                 });
             }
 
@@ -370,15 +372,14 @@
             //$(".dev__currentTimeZone").text(currentTimeZone);
 
             //
-            //  Menu
+            //  Hamburger Menu – hangle open / close
             //
             $('.nav__opener').click(function() {
               $(this).toggleClass('active');
               $('.nav').toggleClass('open');
             });
-
             //
-            //  Handle Nav item click
+            //  Nav items – Handle  click
             //
             $('.nav a').click(function() {
               $('.nav__opener').removeClass('active');
